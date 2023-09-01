@@ -1,25 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing:  border-box;
+    box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Open Sans', sans-serif;
 }
 
-header{
-height: 100px;
-background-color: #3F5B31;
+header {
+    height: 100px;
+    background-color: #3F5B31;
 
-display: flex;
-justify-content: space-between;
-align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-ul{
+ul {
     display: flex;
-    list-style-type: none ;
+    list-style-type: none;
     padding-right: 15px;
 }
 
@@ -28,20 +28,21 @@ ul{
     width: auto;
     padding-left: 15px;
 }
-.logo img{
+
+.logo img {
     padding: 25px;
 }
 
 
-ul li a{
-    padding:0 20px;
+ul li a {
+    padding: 0 20px;
     text-decoration: none;
     color: white;
     display: inline-block;
 }
 
 
-#currentPage::after{
+#currentPage::after {
     content: '';
     display: block;
     height: 4px;
@@ -49,7 +50,7 @@ ul li a{
     background: white;
 }
 
-li a::after{
+li a::after {
     content: '';
     display: block;
     height: 4px;
@@ -58,26 +59,38 @@ li a::after{
     transition: all .5s;
 }
 
-li a:hover::after{
-     width: 100%;
+li a:hover::after {
+    width: 100%;
 }
 
-.intro{
+.intro {
     display: flex;
-    height: calc(600px);
+    flex-direction: column;
+    /* height: calc(600px); this is breaking page size changes*/
     align-items: center;
     justify-content: center;
     width: 100%;
+}
+
+.contain {
+    display: inline-flex;
+    flex-direction: column;
+    /* width: min-content; */
+    align-items: center;
+    width: 500px;
+    padding: 25px;
+}
+
+.text {
+    display: flex;
+    padding: 15px;
+    /* width: 30%; this is what is making the text change size with window changes because its a variable amount of the intro flex */
+    size: 14px;
+    text-align: center;
 }
 
 h1 {
     font-size: 40px;
     color: #133b4f;
     padding-bottom: 20px;
-}
-.text{
-    display: flex;
-    width: 30%;
-    size: 14px;
-    text-align: center;
 }
