@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            width: 300px; /* Adjust the width as needed */
+            margin: 0 auto; /* Center the grid */
+        }
+
+        .grid-item {
+            width: 100%;
+            padding-top: 100%; /* Create square items */
+            background-color: #3498db; /* Blue background color */
+        }
+
+        .grid-item.large {
+            width: 200%; /* Make this item twice as wide */
+        }
+
+        /* Optional: Add some styling for demonstration purposes */
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item large"></div>
+    </div>
+</body>
+</html>
